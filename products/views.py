@@ -37,3 +37,8 @@ def product_delete(request, pk):
         product.delete()
         return redirect('product_list')
     return render(request, 'products/product_confirm_delete.html', {'product': product})
+
+from django.shortcuts import redirect
+
+def homepage(request):
+    return redirect('product_list')
